@@ -36,8 +36,8 @@ struct WeatherManager {
             // 2. Create a URLSession
             let session = URLSession(configuration: .default)
             
-            // 3. Give the URLSession a task
-            
+            // 3. Give the URLSession a task -> like putting something into a search in google
+       
             let task = session.dataTask(with: url) { data, response, error in
                 if error != nil {
                     self.delegate?.didFailWithError(error: error!)
@@ -52,7 +52,7 @@ struct WeatherManager {
                 }
             }
             
-            // 4. Start the task
+            // 4. Start the task -> like pressing the search button in google
             task.resume()
         }
         
